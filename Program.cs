@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 
 namespace Session5_Assignment
@@ -73,22 +74,47 @@ namespace Session5_Assignment
 
             #region Q5
             //Write a program in C# Sharp to find the second largest element in an array.
-            int[] array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
-            int max1 = array[0]; int max2 = 0;
-            for (int i = 1; i < array.Length; i++)
+            //int[] array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
+            //int max1 = array[0]; int max2 = 0;
+            //for (int i = 1; i < array.Length; i++)
+            //{
+            //    if (array[i] > max1) { max1 = array[i]; }
+
+
+            //}
+            //for (int i = 1; i < array.Length; i++)
+            //{
+            //    if (array[i] > max2 & array[i]!=max1) { max2 = array[i]; }
+
+
+            //}
+            //Console.WriteLine($"Second high num = {max2}");
+
+            #endregion
+
+            #region Q6
+            //write a program find the longest distance between Two equal cells. In this example. The distance
+            //is measured by the number Of cells- for example, the distance between the first and the fourth cell is 2(cell 2 and cell 3).
+            int[] numss = new int[10]; int longest = 0;
+        
+            for (int i = 0; i < numss.Length; ) 
             {
-                if (array[i] > max1) { max1 = array[i]; }
-               
-
+                Console.WriteLine("Enter num " + (i + 1));
+                if (int.TryParse(Console.ReadLine(),out int s))
+                {
+                    numss[i] = s;
+                    i++;
+                }
             }
-            for (int i = 1; i < array.Length; i++)
+            for (int i = 0; i < numss.Length; i++) 
             {
-                if (array[i] > max2 & array[i]!=max1) { max2 = array[i]; }
-
-
+                int first =Array.IndexOf(numss, numss[i]);
+                int last =Array.LastIndexOf(numss, numss[i]);
+                int difference = last-first-1;
+                if(difference > longest) {  
+                    longest = difference; }
             }
-            Console.WriteLine($"Second high num = {max2}");
-
+            Console.WriteLine("max length = " + longest);
             #endregion
         }
     }
