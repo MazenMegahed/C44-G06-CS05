@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using System.Drawing;
 
 namespace Session5_Assignment
 {
@@ -10,18 +11,29 @@ namespace Session5_Assignment
             //1- . Write a program that prints an identity matrix using for loop, in other
             //  words takes a value n from the user and shows the identity table of size n *n.
 
-            Console.Write("Enter identity matrix size :  ");
-             int.TryParse(Console.ReadLine(),out int x);
-            for (int i = 0; i < x; i++)
-            {
-                for (int j = 0; j < x; j++)
-                {
-                    if (j == i) { Console.Write(1+" "); }
-                    else { Console.Write(0 + " "); }
-                }
-                Console.WriteLine();
-            }
+            //Console.Write("Enter identity matrix size :  ");
+            // int.TryParse(Console.ReadLine(),out int x);
+            //for (int i = 0; i < x; i++)
+            //{
+            //    for (int j = 0; j < x; j++)
+            //    {
+            //        if (j == i) { Console.Write(1+" "); }
+            //        else { Console.Write(0 + " "); }
+            //    }
+            //    Console.WriteLine();
+            //}
 
+            #endregion
+
+            #region Q2
+            //Write a program in C# Sharp to find the sum of all elements of the array.
+            int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int sum=0;
+            for (int i = 0; i < nums.Length; i++) 
+            {
+                sum+= nums[i];
+            }
+            Console.WriteLine($"Summation = {sum}");
             #endregion
         }
     }
