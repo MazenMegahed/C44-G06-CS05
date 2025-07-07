@@ -60,15 +60,35 @@ namespace Session5_Assignment
 
             #region Q4
             //Write a program in C# Sharp to find maximum and minimum element in an array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
+            //int[] array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
+            //int max = array[0]; int min = array[0];
+            //for (int i = 1; i < array.Length; i++)
+            //{ 
+            //    if(array[i] > max) {  max=array[i];}
+            //else if (array[i] < min) { min=array[i];}
+
+            //}
+            //Console.WriteLine($"Maximum = {max} , Minimum = {min}");
+            #endregion
+
+            #region Q5
+            //Write a program in C# Sharp to find the second largest element in an array.
             int[] array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
-            int max = array[0]; int min = array[0];
+            int max1 = array[0]; int max2 = 0;
             for (int i = 1; i < array.Length; i++)
-            { 
-                if(array[i] > max) {  max=array[i];}
-            else if (array[i] < min) { min=array[i];}
+            {
+                if (array[i] > max1) { max1 = array[i]; }
+               
 
             }
-            Console.WriteLine($"Maximum = {max} , Minimum = {min}");
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] > max2 & array[i]!=max1) { max2 = array[i]; }
+
+
+            }
+            Console.WriteLine($"Second high num = {max2}");
+
             #endregion
         }
     }
