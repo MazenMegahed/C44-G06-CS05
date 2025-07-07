@@ -38,24 +38,37 @@ namespace Session5_Assignment
 
             #region Q3
             //Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order.
-            int[] array1 = { 5,7,6};
-            int[] array2 = { 11,2,4 };
+            //int[] array1 = { 5,7,6};
+            //int[] array2 = { 11,2,4 };
 
-            int[] mergedarray =new int[array1.GetLength(0)];
-            for (int i = 0; i < array1.GetLength(0); i++) 
-            {
-                mergedarray[i] = array1[i] + array2[i];
+            //int[] mergedarray =new int[array1.GetLength(0)];
+            //for (int i = 0; i < array1.GetLength(0); i++) 
+            //{
+            //    mergedarray[i] = array1[i] + array2[i];
+
+            //}
+            //Array.Sort(mergedarray);
+            //for (int i = 0; i < array1.GetLength(0); i++)
+            //{
+
+            //        Console.Write( mergedarray[i]+" ") ;
+
+
+            //}
+
+            #endregion
+
+            #region Q4
+            //Write a program in C# Sharp to find maximum and minimum element in an array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
+            int[] array = { 2, 4, 2, 6, 6, 8, 9, 10, 30, 59, 58 };
+            int max = array[0]; int min = array[0];
+            for (int i = 1; i < array.Length; i++)
+            { 
+                if(array[i] > max) {  max=array[i];}
+            else if (array[i] < min) { min=array[i];}
 
             }
-            Array.Sort(mergedarray);
-            for (int i = 0; i < array1.GetLength(0); i++)
-            {
-
-                    Console.Write( mergedarray[i]+" ") ;
-
-              
-            }
-
+            Console.WriteLine($"Maximum = {max} , Minimum = {min}");
             #endregion
         }
     }
