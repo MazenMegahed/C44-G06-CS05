@@ -27,13 +27,35 @@ namespace Session5_Assignment
 
             #region Q2
             //Write a program in C# Sharp to find the sum of all elements of the array.
-            int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int sum=0;
-            for (int i = 0; i < nums.Length; i++) 
+            //int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //int sum=0;
+            //for (int i = 0; i < nums.Length; i++) 
+            //{
+            //    sum+= nums[i];
+            //}
+            //Console.WriteLine($"Summation = {sum}");
+            #endregion
+
+            #region Q3
+            //Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order.
+            int[] array1 = { 5,7,6};
+            int[] array2 = { 11,2,4 };
+
+            int[] mergedarray =new int[array1.GetLength(0)];
+            for (int i = 0; i < array1.GetLength(0); i++) 
             {
-                sum+= nums[i];
+                mergedarray[i] = array1[i] + array2[i];
+
             }
-            Console.WriteLine($"Summation = {sum}");
+            Array.Sort(mergedarray);
+            for (int i = 0; i < array1.GetLength(0); i++)
+            {
+
+                    Console.Write( mergedarray[i]+" ") ;
+
+              
+            }
+
             #endregion
         }
     }
