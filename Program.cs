@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Net.NetworkInformation;
+using System.Xml.Linq;
+using static System.Formats.Asn1.AsnWriter;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace Session5_Assignment
@@ -97,7 +100,7 @@ namespace Session5_Assignment
             //write a program find the longest distance between Two equal cells. In this example. The distance
             //is measured by the number Of cells- for example, the distance between the first and the fourth cell is 2(cell 2 and cell 3).
             //int[] numss = new int[10]; int longest = 0;
-        
+
             //for (int i = 0; i < numss.Length; ) 
             //{
             //    Console.WriteLine("Enter num " + (i + 1));
@@ -120,12 +123,41 @@ namespace Session5_Assignment
 
             #region Q7
             //Given a list of space separated words, reverse the order of the words.
-            string txt = "this is a test";
+            //string txt = "this is a test";
 
-            var x = txt.Split(" ");
-            Array.Reverse(x);
-            for (int i = 0; i < x.Length; i++) { Console.Write(x[i]+" "); }
-            
+            //var x = txt.Split(" ");
+            //Array.Reverse(x);
+            //for (int i = 0; i < x.Length; i++) { Console.Write(x[i]+" "); }
+
+            #endregion
+
+            #region Q8
+            //Write a program to create two multidimensional arrays of same size. Accept
+           // value from user and store them in first array. Now copy all the elements of
+           //first array on second array and print second array.
+           string[,] names = new string[2,2];
+            string[,] coppednames = new string[2, 2];
+
+            for (int i = 0; i < names.GetLength(0); i++)
+            { 
+            for (int y =0; y<names.GetLength(1); y++)
+                {
+                    Console.WriteLine($"enter name of student {(y+1)} in class {i+1}");
+                    names[i, y] = Console.ReadLine(); 
+                  
+                }
+            }
+
+            for (int i = 0; i < names.GetLength(0); i++)
+            {
+                for (int y = 0; y < names.GetLength(1); y++)
+                {
+                    coppednames[i,y] = names[i, y];
+                    Console.Write(coppednames[i, y] + " ");
+                }
+                Console.WriteLine();    
+            }
+
             #endregion
         }
     }
