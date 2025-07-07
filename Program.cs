@@ -133,31 +133,41 @@ namespace Session5_Assignment
 
             #region Q8
             //Write a program to create two multidimensional arrays of same size. Accept
-           // value from user and store them in first array. Now copy all the elements of
-           //first array on second array and print second array.
-           string[,] names = new string[2,2];
-            string[,] coppednames = new string[2, 2];
+            // value from user and store them in first array. Now copy all the elements of
+            //first array on second array and print second array.
+            //string[,] names = new string[2,2];
+            // string[,] coppednames = new string[2, 2];
 
-            for (int i = 0; i < names.GetLength(0); i++)
-            { 
-            for (int y =0; y<names.GetLength(1); y++)
-                {
-                    Console.WriteLine($"enter name of student {(y+1)} in class {i+1}");
-                    names[i, y] = Console.ReadLine(); 
-                  
-                }
-            }
+            // for (int i = 0; i < names.GetLength(0); i++)
+            // { 
+            // for (int y =0; y<names.GetLength(1); y++)
+            //     {
+            //         Console.WriteLine($"enter name of student {(y+1)} in class {i+1}");
+            //         names[i, y] = Console.ReadLine(); 
 
-            for (int i = 0; i < names.GetLength(0); i++)
+            //     }
+            // }
+
+            // for (int i = 0; i < names.GetLength(0); i++)
+            // {
+            //     for (int y = 0; y < names.GetLength(1); y++)
+            //     {
+            //         coppednames[i,y] = names[i, y];
+            //         Console.Write(coppednames[i, y] + " ");
+            //     }
+            //     Console.WriteLine();    
+            // }
+
+            #endregion
+
+            #region Q9
+
+            // Write a Program to Print One Dimensional Array in Reverse Order
+            int[] array = { 1, 2, 3, 4, 5 };
+            for (int x = array.Length - 1; x >= 0; x--) 
             {
-                for (int y = 0; y < names.GetLength(1); y++)
-                {
-                    coppednames[i,y] = names[i, y];
-                    Console.Write(coppednames[i, y] + " ");
-                }
-                Console.WriteLine();    
+                Console.Write(array[x]+" ");
             }
-
             #endregion
         }
     }
